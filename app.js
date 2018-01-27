@@ -25,6 +25,7 @@ require('./db');
 const mongoose = require('mongoose');
 const User = mongoose.model('User');
 const Rating = mongoose.model('Rating');
+const Bathroom = mongoose.model('Bathroom');
 
 //*/ set up passport.js
 const passport = require('passport');
@@ -74,7 +75,15 @@ app.get('/logout', function(req, res) {
 	req.logout();
 	res.redirect('/');
 });
-//*/
+//********************** Other Routes ******************************/
+
+app.get('/bathrooms', function (req, res) {
+	Bathroom.find(function(err, rooms, count) {
+		res.render('bathrooms', {
+			rooms: rooms
+		});
+	});
+});
 
 app.listen(process.env.PORT || 5000);
 console.log('Started server on port 5000');
