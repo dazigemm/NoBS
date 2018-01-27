@@ -15,10 +15,10 @@
     "Location": "Tinton Avenue, East 165 Street, Union Avenue, East 166 Street",
     "Info": {
       "Gender": "Gender Neutral",
-      "Pads/Tampons": false,
-      "Public/Private": "public",
+      "PadsTampons": false,
+      "PublicPrivate": "public",
       "Distance": 5,
-      "Stall/Single": "Single"
+      "StallSingle": "Single"
     }
   },
   {
@@ -26,10 +26,10 @@
     "Location": "Crotona Avenue, East 181 Street",
     "Info": {
       "Gender": "Gender Neutral",
-      "Pads/Tampons": false,
-      "Public/Private": "public",
+      "PadsTampons": false,
+      "PublicPrivate": "public",
       "Distance": 5,
-      "Stall/Single": "Single"
+      "StallSingle": "Single"
     }
   },
   {
@@ -37,10 +37,10 @@
     "Location": "East 156 Street, Forest Avenue",
     "Info": {
       "Gender": "Gender Neutral",
-      "Pads/Tampons": false,
-      "Public/Private": "public",
+      "PadsTampons": false,
+      "PublicPrivate": "public",
       "Distance": 5,
-      "Stall/Single": "Single"
+      "StallSingle": "Single"
     }
   },
   {
@@ -48,10 +48,10 @@
     "Location": "3 Avenue, East 144 Street, East 146 Street",
     "Info": {
       "Gender": "Gender Neutral",
-      "Pads/Tampons": false,
-      "Public/Private": "public",
+      "PadsTampons": false,
+      "PublicPrivate": "public",
       "Distance": 5,
-      "Stall/Single": "Single"
+      "StallSingle": "Single"
     }
   }
 ]
