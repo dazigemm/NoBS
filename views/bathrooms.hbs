@@ -23,8 +23,23 @@
 </form>
 <hr>
 {{#if rooms}}
-List the rooms here?
-	{{rooms}}
+	<h3> Here are the available logos </h3>
+	{{#each rooms}}
+		<h5>{{Name}}</h5>
+		Location: {{Location}}
+		<br>
+		Rating: {{rating}} Stars
+		<br>
+		Handicap Accessible: {{handicap}}
+		<br>
+		Has Pads or Tampons: {{pads}}
+		<br>
+		{{#if pads}}
+			Price: {{price}}
+		{{/if}}
+		<br>
+
+	{{/each}}
 {{else}}
 No bathrooms available at this time :'(
 {{/if}}
