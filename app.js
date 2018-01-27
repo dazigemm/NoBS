@@ -21,6 +21,7 @@ const sessionOptions = {
 app.use(session(sessionOptions));
 
 //* link db
+const datastore = require('./datastore.js');
 require('./db');
 const mongoose = require('mongoose');
 const User = mongoose.model('User');
@@ -42,6 +43,7 @@ app.get('/', function(req, res) {
 
 	//res.send('hello');
 	res.render('index', {user: req.user});
+	//res.send("hello world");
 });
 
 /* ************ User Authentication Stuff *****************/
@@ -59,16 +61,17 @@ app.get('/register', function(req, res) {
 });
 
 app.post('/register', function(req, res) {
-	const pw = req.body.password;
-	const name = req.body.username;
-	User.register(new User({username: name, rating: 0}), pw, function(err, user) {
-		if (err) {
-			return res.render('register', {user: user});
-		}
-		passport.authenticate('local')(req, res, function () {
-			res.redirect('/');
-		});
-	});
+	datastore.testCreateUser();
+	// const pw = req.body.password;
+	// const name = req.body.username;
+	// User.register(new User({username: name, rating: 0}), pw, function(err, user) {
+	// 	if (err) {
+	// 		return res.render('register', {user: user});
+	// 	}
+	// 	passport.authenticate('local')(req, res, function () {
+	// 		res.redirect('/');
+	// 	});
+	// });
 });
 
 app.get('/logout', function(req, res) {
