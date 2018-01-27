@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const passportLocalMongoose = require('passport-local-mongoose');
 
 const User = new mongoose.Schema({
-	username: {type: String, unique: true},
+	name: String,
 	password: String
 });
 
@@ -11,6 +11,8 @@ const Rating = new mongoose.Schema({
 	stars: Number,
 	review: String
 });
+
+User.plugin(passportLocalMongoose);
 
 mongoose.model('User', User);
 mongoose.model('Rating', Rating);
