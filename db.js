@@ -17,7 +17,7 @@ const Bathroom = new mongoose.Schema({
 	location: String,
 	rating: [Rating],
 	amenities: [String],
-	price: Number 
+	price: Number
 });
 
 User.plugin(passportLocalMongoose);

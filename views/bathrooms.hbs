@@ -24,7 +24,18 @@
 <hr>
 {{#if rooms}}
 List the rooms here?
-	{{rooms}}
+	<div>
+	{{#each rooms}}
+	<p>{{@index}}. Name: {{Name}}<br>
+		Location: {{Location}}
+		Info:
+			Gender
+			Pads/Tampons
+			Public/Private{{}}
+	</p>
+
+	{{/each}}
+	</div>
 {{else}}
 No bathrooms available at this time :'(
 {{/if}}
@@ -47,4 +58,3 @@ No bathrooms available at this time :'(
 <script async defer
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpQUJETa6o-dkuNiYfVBTnaao9zplX6_Y&callback=initMap">
 </script>
-

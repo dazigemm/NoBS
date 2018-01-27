@@ -12,7 +12,7 @@ const datastore = new Datastore({
   projectId: projectId,
 });
 
-function testCreateUser(){
+function createUser(username, userpassword){
   // The kind for the new entity
   const kind = 'User';
   // The name/ID for the new entity
@@ -24,8 +24,8 @@ function testCreateUser(){
   const user = {
     key: userKey,
     data: {
-      name: 'test1',
-      password: 'test1'
+      name: username,
+      password: userpassword
     },
   };
 
@@ -40,6 +40,54 @@ function testCreateUser(){
     });
 }
 
+function newBathroom(address){
+  // The kind for the new entity
+  const kind = 'Bathroom';
+  // The name/ID for the new entity
+  const name = uuidv1();
+  // The Cloud Datastore key for the new entity
+  const userKey = datastore.key([kind, name]);
+
+  // Prepares the new entity
+  const user = {
+    key: userKey,
+    data: {
+      name: username,
+      password: userpassword
+    },
+  };
+
+  // Saves the entity
+  datastore
+    .save(user)
+    .then(() => {
+      console.log(`Saved ${user.key.name}: ${user.data.name}`);
+    })
+    .catch(err => {
+      console.error('ERROR:', err);
+    });
+}
+
+function displayAllData(){
+  var data = {};
+  const query = datastore.createQuery('User');
+
+  query.run(function(err, users, info) {
+    // entities = An array of records.
+    var users = [];
+    // Access the Key object for an entity.
+    console.log(users[0][datastore.KEY]);
+    for (user in users){
+      users.push(user);
+    }
+    data.push(users);
+  });
+  console.log(data);
+  return data;
+}
+
 module.exports = {
-  testCreateUser: testCreateUser
+  createUser: createUser,
+  newBathroom: newBathroom,
+  displayAllData: displayAllData
 }
