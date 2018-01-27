@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 h1 {
-	color: blue;
+  color: blue;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.navbar .dropdown-menu .form-control {
+  width: 200px;
+  font-family: 'Raleway', sans-serif;
 }
