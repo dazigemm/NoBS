@@ -1,0 +1,6 @@
+node_modules
+<<<<<<< HEAD
+package-lock.json
+=======
+*.swp
+>>>>>>> b903c8d95bb3c10c0901c13efc2c1c88c51859fa

@@ -11,3 +11,8 @@ button:focus {
   width: 200px;
   font-family: 'Raleway', sans-serif;
 }
+
+body {
+  margin-top: 60px;
+  padding: 2%;
+}

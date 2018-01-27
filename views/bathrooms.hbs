@@ -1,0 +1,23 @@
+<h1> Add a Bathroom </h1>
+<br>
+<form action="/bathrooms" method="post">
+	Name: <input type="text" name="Name">
+	<br>
+	Location: <input type="text" name="Location">
+	<br>
+	Handicap Accessible?
+	<input type="radio" name="handicap" value="yes"> Yes
+	<input type="radio" name="handicap" value="no"> No
+	<br>
+	Tampons or Pads available?
+	<input type="radio" name="pads" value="yes"> Yes
+	<input type="radio" name="pads" value="no"> No
+	<br>
+	If so, how much are they?
+	<input type="number" name="price" value="0">
+	<br>
+	Overall, how would you rate this bathroom?
+	<input type="number" name="rating" min="1" max="5">
+	<br>
+	<input type="submit" value="Add">
+</form>
