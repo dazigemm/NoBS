@@ -23,15 +23,24 @@
 </form>
 <hr>
 {{#if rooms}}
-List the rooms here?
+	<h3> Available Bathrooms </h3>
 	<div>
 	{{#each rooms}}
-	<p>{{@index}}. Name: {{Name}}<br>
+	<p>{{@index}}. Name: {{Name}}
+		<br>
 		Location: {{Location}}
+		<br>
 		Info:
-			Gender
-			Pads/Tampons
-			Public/Private{{}}
+		<br>
+			Gender: {{Info.Gender}}
+			<br>
+			Pads/Tampons: {{Info.PadsTampons}} 
+			<br>
+			Public/Private: {{Info.PublicPrivate}} 
+			<br>
+			Distance: {{Info.Distance}} 
+			<br>
+			Stall/Single: {{Info.StallSingle}}
 	</p>
 
 	{{/each}}

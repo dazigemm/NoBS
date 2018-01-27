@@ -4,10 +4,10 @@
     "Location": "Teller Avenue, Park Avenue, Clay Avenue, East 64 Street",
     "Info": {
       "Gender": "Gender Neutral",
-      "Pads/Tampons": false,
-      "Public/Private": "public",
+      "PadsTampons": false,
+      "PublicPrivate": "public",
       "Distance": 5,
-      "Stall/Single": "Single"
+      "StallSingle": "Single"
     }
   },
   {
