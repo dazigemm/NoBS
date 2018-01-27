@@ -1,3 +1,50 @@
-Rooms
+<h1> Add a Bathroom </h1>
 <br>
-{{ rooms }}
+<form action="/bathrooms" method="post">
+	Name: <input type="text" name="Name">
+	<br>
+	Location: <input type="text" name="Location">
+	<br>
+	Handicap Accessible?
+	<input type="radio" name="handicap" value="yes"> Yes
+	<input type="radio" name="handicap" value="no"> No
+	<br>
+	Tampons or Pads available?
+	<input type="radio" name="pads" value="yes"> Yes
+	<input type="radio" name="pads" value="no"> No
+	<br>
+	If so, how much are they?
+	<input type="number" name="price" value="0">
+	<br>
+	Overall, how would you rate this bathroom?
+	<input type="number" name="rating" min="1" max="5">
+	<br>
+	<input type="submit" value="Add">
+</form>
+<hr>
+{{#if rooms}}
+List the rooms here?
+	{{rooms}}
+{{else}}
+No bathrooms available at this time :'(
+{{/if}}
+<hr>
+<h3> Testing Google Maps </h3>
+<div id="map"></div>
+<script>
+	function initMap() {
+		var uluru = {lat: -25.363, lng: 131.044};
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 4,
+			center: uluru
+		});
+		var marker = new google.maps.Marker({
+			posiition: uluru,
+			map: map
+		});
+	}
+</script>
+<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpQUJETa6o-dkuNiYfVBTnaao9zplX6_Y&callback=initMap">
+</script>
+

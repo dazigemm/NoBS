@@ -1,0 +1,462 @@
+[
+ {
+   "Name": "Arcilla Playground",
+   "Location": "Teller Avenue, Park Avenue, Clay Avenue, East 64 Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Behagen Playground",
+   "Location": "Tinton Avenue, East 165 Street, Union Avenue, East 166 Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Belmont Playground",
+   "Location": "Crotona Avenue, East 181 Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Capt. Rivera Playground",
+   "Location": "East 156 Street, Forest Avenue",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Clark Playground",
+   "Location": "3 Avenue, East 144 Street, East 146 Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Crotona Park (Pool House)",
+   "Location": " 173rd Street and Fulton Avenue",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Franz Sigel Park",
+   "Location": "East 153 Street, Gerard Avenue, East 151 Street, Walton Avenue",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Magenta Playground",
+   "Location": "Olinville Avenue, Rosewood Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Mathew Muliner Playground",
+   "Location": "Delancy Place, Muliner Avenue, Matthews Avenue",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Millbrook Playground",
+   "Location": "East 135 Street, Cypress Avenue",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Orchard Beach Pavilion",
+   "Location": "Bruckner Boulevard, Eastchester Bay, Hutchinson",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Parkside Playground",
+   "Location": "Arnow Avenue, Adee Avenue, Olinville Avenue",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Pelham Bay Park (Hunter Island Picnic Area)",
+   "Location": "Bruckner Boulevard, Eastchester Bay, Hutchinson",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Pelham Bay Park (Playground for All Children)",
+   "Location": "Bruckner Expressway & Buhre Avenue",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Quarry Ballfields",
+   "Location": "Quarry Road, East 181 Street, Oak Place & Hughes Avenue",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Richman (Echo) Park Playground",
+   "Location": "East 178 Street & Ryer Avenue, Upper Level",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Riverbend Playground",
+   "Location": "Bailey Avenue, West Kingsbridge Road",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "St. Mary's Playground East Playground",
+   "Location": "Jackson Avenue between East 144 and 145 streets",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Vidalia Park",
+   "Location": "Vyse & Daly avenues between West 179-180 streets",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Albert J. Parham Playground",
+   "Location": "Adelphi Street, Clermont, DeKalb & Willoughby avenues",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Carroll Park",
+   "Location": "Court & Smith Streets",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Coney Island Beach",
+   "Location": "Stillwell Avenue",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Coney Island Beach",
+   "Location": "West 16th Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Coney Island Beach",
+   "Location": "W 22 ST.",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Fort Greene Playground",
+   "Location": "Myrtle Avenue & St. Edwards Plaza",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Fox Playground",
+   "Location": "Avenue H, East 54 to E 55 streets",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Glenwood Playground",
+   "Location": "Ralph Avenue & Farragut Road",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Jesse Owens Playground",
+   "Location": "Stuyvesant & Lafayette avenues",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Prospect Park (Middle Long Meadow)",
+   "Location": "Picnic House",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Prospect Park (The Bandshell)",
+   "Location": "Prospect Park West/7th Street/15th Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "PS 286 Playground",
+   "Location": "Avenue Y, between Brown & Haring streets",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Sternberg Park",
+   "Location": "Montrose Avenue, Boerum, Lorimer, Leonard streets",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Tiger Playground",
+   "Location": "Evergreen Avenue & Eldert Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Underwood Park",
+   "Location": "Lafayette & Waverly avenues",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Washington Hall Playground",
+   "Location": "Park, Washington avenues to Hall Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Yak Playground",
+   "Location": "Avenue Y between Coyle & Batchelder streets",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Carl Schurz Park",
+   "Location": "East 84 Street & East End Avenue",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Central Park (Dana Discovery Center)",
+   "Location": "110th Street between Fifth Avenue and Malcolm X Boulevard",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Central Park Delacorte Comfort Station",
+   "Location": "Mid-Park at 80th Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Central Park (Lasker)",
+   "Location": "Central Park at 107th Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Central Park (North Meadow Recreation Center)",
+   "Location": "Mid-park at 97th Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Central Park (Wollman Rink)",
+   "Location": "Center Drive to East Drive (including Gapstow Bridge)",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Chelsea Recreation Center",
+   "Location": "South of West 25 Street, 9 to 10 avenues",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Columbus Park",
+   "Location": "Baxter, Mulberry, Bayard & Worth streets",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Fort Tryon Park (Anne Loftus Playground)",
+   "Location": "Broadway & Dyckman Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Fort Washington Park (Lily Brown Playground)",
+   "Location": "West 162 Street, east of Riverside Drive",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Hamilton Fish Park (Recreation Center)",
+   "Location": "Between East Houston & Stanton streets",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "J. Hood Wright Park",
+   "Location": "Ft. Washington & Haven avenues, West 173 Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Jackie Robinson Park (Recreation Center)",
+   "Location": "Bradhurst & Edgecombe avenues,West 145 to West 155 streets",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Morningside Park",
+   "Location": "West 123 Street & Morningside Avenue",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Riverside Park (Café)",
+   "Location": "105th Street, next to Henry Hudson Parkway",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Sara D. Roosevelt Park",
+   "Location": "East Houston Street to Canal Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Vesuvio Playground",
+   "Location": "Spring & Thompson streets",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Bayside Fields",
+   "Location": "204 Street & 29 Avenue, Clearview Expressway",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Cunningham Park (HQ8)",
+   "Location": "South of Union Turnpike, between Francis Lewis Boulevard & 193rd Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Flushing Meadows Corona Park (Passerelle)",
+   "Location": "Unisphere Fountain to pool, at Meridian Road",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Flushing Meadows Corona Park (Playground for All Children) ",
+   "Location": "111 Street and Corona Avenue",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Flushing Meadows Corona Park (Zoo, Ballfields)",
+   "Location": "Grand Central Parkway to 111th Street to Heckscher Children Farm to Playground for All Children",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Juniper Valley Park",
+   "Location": "Lutheran Avenue; North and South Juniper boulevards; and the pathway from 76th Street on north end to 75th Street on south end",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Lawerence Virgilio Playground",
+   "Location": "39 Drive & 54 Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Michaelis-Bayswater Park",
+   "Location": "Beach Channel Drive, B 32 Street, Dwight Avenue, Norton Avenue",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Arrochar Playground",
+   "Location": "Sand Lane, Major Avenue, McFarland Avenue",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Blood Root Valley (Greenbelt Nature Center)",
+   "Location": "Rockland, Manor and Brielle avenues, Forest Hill Road",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Blood Root Valley (Park House)",
+   "Location": "Rockland, Manor and Brielle avenues, Forest Hill Road",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Blue Heron Park Preserve (Nature Center)",
+   "Location": "Poillon Avenue",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Corporal Thompson Park/West Brighton Pool",
+   "Location": "Broadway, Henderson Avenue",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Double Nickel Playground",
+   "Location": "Osborne Street and Preston Avenue",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Grandview Playground",
+   "Location": "Grandview Avenue, Continental Place",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "High Rock Park (McArthur Park)",
+   "Location": "Richmond Parkway & Moravian Cemetery at Rockland Avenue",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Joline Pool Playground (Modular Equipment)",
+   "Location": "Joline Avenue, Hylan Boulevard",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Lyons Pool",
+   "Location": "Pier 6, Victory Boulevard",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Markham Playground",
+   "Location": "Willowbrook Parkway, Forest Avenue & Houston Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Midland Beach & Boardwalk",
+   "Location": "Natural Area and Boardwalk from Sands Lane to Vulcan Street, East of Father Capodanno Boulevard",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Midland Field",
+   "Location": "Midland Avenue & Mason Avenue",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "South Beach (Saturn Playground)",
+   "Location": "Natural Area and Boardwalk from Sands Lane to Vulcan Street, East of Father Capodanno Boulevard",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Stapleton Playground",
+   "Location": "Tompkins Avenue & Broad Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Terrace Playground",
+   "Location": "Howard Avenue & Martha Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Todt Hill Playground",
+   "Location": "Schmidts Lane & Manor Road",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Coney Island",
+   "Location": "Brighton 2nd",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Coney Island",
+   "Location": "W 27 ST.",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Coney Island",
+   "Location": "W 33 St.",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Marine Park Nature Center",
+   "Location": "East 33rd Street and Avenue U",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Bendheim Playground",
+   "Location": "100th Street and Fifth Ave",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Liberty Pool",
+   "Location": "173rd Street and 106th Avenue",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Ederle Comfort Station",
+   "Location": "",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Rockaway Beach 86 Comfort Station",
+   "Location": "Beach 86 Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Rockaway Beach 97 Comfort Station",
+   "Location": "Beach 97 Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Rockaway Beach 106 Comfort Station",
+   "Location": "Beach 106 Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Rockaway Beach 117th L/G",
+   "Location": "Beach 117 Street",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Bloomingdale Park",
+   "Location": "Richmond Pkwy, Bloomingdale Rd., Lenevar Ave",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "Conference House Park",
+   "Location": "Pittsville St,Hylan Blvd.,Surf,Richard Aves",
+   "Type": "Bathrooms"
+ },
+ {
+   "Name": "South Beach Wetlands",
+   "Location": "Quintard St Bet. Quincy Ave & Father Capodanno Blvd",
+   "Type": "Bathrooms"
+ }
+]
