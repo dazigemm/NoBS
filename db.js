@@ -12,10 +12,17 @@ const Rating = new mongoose.Schema({
 	review: String
 });
 
+const Bathroom = new mongoose.Schema({
+	name: String, 
+	address: String,
+	rating: [Rating]
+});
+
 User.plugin(passportLocalMongoose);
 
 mongoose.model('User', User);
 mongoose.model('Rating', Rating);
+mongoose.model('Bathroom', Bathroom);
 
 var uristring = process.env.MONGODB_URI ||
 	'mongodb://localhost/nobs';
