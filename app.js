@@ -79,10 +79,15 @@ app.get('/logout', function(req, res) {
 
 app.get('/bathrooms', function (req, res) {
 	Bathroom.find(function(err, rooms, count) {
+		console.log(rooms);
 		res.render('bathrooms', {
 			rooms: rooms
 		});
 	});
+});
+
+app.post('/bathrooms', function (req, res) {
+
 });
 
 app.listen(process.env.PORT || 5000);
