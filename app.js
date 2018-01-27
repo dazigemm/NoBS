@@ -87,7 +87,7 @@ app.get('/bathrooms', function (req, res) {
 });
 
 app.post('/bathrooms', function (req, res) {
-
+	res.send("hello world");
 });
 
 app.listen(process.env.PORT || 5000);
