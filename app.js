@@ -1,3 +1,7 @@
+//app.js
+//Copyright © 2018 Daisy Zheng <dz994@nyu.edu>
+//License: Apache License, Version 2.0
+
 // app.js
 const express = require('express');
 const app = express();
@@ -185,7 +189,7 @@ app.post('/rate/:slug', function(req, res) {
 	if (req.user == null) {
 		res.redirect('/login');
 	}
-	else { 
+	else {
 		const room = req.params.slug;
 		let review = new Rating ({
 			stars: req.body.stars,
