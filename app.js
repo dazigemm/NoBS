@@ -108,7 +108,7 @@ app.get('/bathrooms', function (req, res) {
 	Bathroom.find(function(err, rooms, count) {
 	 	//console.log(rooms);
 	 	res.render('bathrooms', {
-	 		rooms: parseData.getBathrooms().concat(rooms)
+	 		rooms: rooms
 	 	});
 	});
 });
