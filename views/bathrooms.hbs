@@ -5,6 +5,19 @@
 	<br>
 	Location: <input type="text" name="Location">
 	<br>
+	Gender:
+	<select name="gender">
+		<option value="Neutral">Gender Neutral</option>
+		<option value="Female">Female</option>
+		<option value="Male">Male</option>
+	</select>
+	<br>
+	Bathroom Type:
+	<select name="style"> 
+		<option value="Single">Single</option>
+		<option value="Stalls">Stalls</option>
+	</select>
+	<br>
 	Handicap Accessible?
 	<input type="radio" name="handicap" value="yes"> Yes
 	<input type="radio" name="handicap" value="no"> No
@@ -13,10 +26,7 @@
 	<input type="radio" name="pads" value="yes"> Yes
 	<input type="radio" name="pads" value="no"> No
 	<br>
-	If so, how much are they?
-	<input type="number" name="price" value="0">
-	<br>
-	Overall, how would you rate this bathroom?
+	On a scale of 1 to 5, how would you rate this bathroom?
 	<input type="number" name="rating" min="1" max="5">
 	<br>
 	<input type="submit" value="Add">
@@ -41,6 +51,8 @@
 			Distance: {{Info.Distance}} 
 			<br>
 			Stall/Single: {{Info.StallSingle}}
+			<br>
+			Handicap Accessible: {{Info.Handicap}}
 	</p>
 
 	{{/each}}
