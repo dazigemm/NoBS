@@ -1,4 +1,4 @@
-# No Bullshit
+# Loo-kup
 <p>This is our open-source project for SheHacks2018!
 Created by Carol He, Daisy Zheng, Connie Chan, Rebecca Shi, Rebecca Hom, and Shanequa Gowins.</p>
 <p>

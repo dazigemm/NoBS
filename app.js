@@ -100,9 +100,18 @@ app.get('/bathrooms', function (req, res) {
 	//res.render('bathrooms', {rooms: parseData.getBathrooms()});
 	let defaultRooms = parseData.getBathrooms();
 	for (var x in defaultRooms) {
-		let bRoom = new Bathroom(defaultRooms[x]);
+		let bRoom = new Bathroom({Name: defaultRooms[x].Name,
+			Location: defaultRooms[x].Location,
+			Info: {
+				Gender: defaultRooms[x].Info.Gender,
+				pads: defaultRooms[x].Info.PadsTampons,
+				handicap: defaultRooms[x].Info.Handicap,
+				privacy: defaultRooms[x].Info.PublicPrivate,
+				roomType: defaultRooms[x].Info.StallSingle}
+			});
+		//console.log(bRoom);
 		Bathroom.count({Name: bRoom.Name}, function (err, count) {
-			if (count == 0) {
+			if (count < 1) {
 				new Bathroom(bRoom).save(function (err, room, count) {
 					console.log("adding default bathrooms");
 				});
