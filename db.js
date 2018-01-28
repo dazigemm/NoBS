@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-//const URLSlugs = require('mongoose-url-slugs');
+const URLSlugs = require('mongoose-url-slugs');
 const passportLocalMongoose = require('passport-local-mongoose');
 
 const User = new mongoose.Schema({
@@ -9,13 +9,15 @@ const User = new mongoose.Schema({
 
 const Rating = new mongoose.Schema({
 	stars: Number,
-	review: String
+	comment: String,
+	user: {type: String, unique: true},
+	date_added: {type: Date, default: Date.now}
 });
 
 const Bathroom = new mongoose.Schema({
-	Name: String,
+	Name: {type: String, unique: true},
 	Location: String,
-	rating: Number,
+	rating: [Rating],
 	Info: {
 		Gender: String,
 		roomType: String,
@@ -26,6 +28,7 @@ const Bathroom = new mongoose.Schema({
 });
 
 User.plugin(passportLocalMongoose);
+Bathroom.plugin(URLSlugs('Name'));
 
 mongoose.model('User', User);
 mongoose.model('Rating', Rating);

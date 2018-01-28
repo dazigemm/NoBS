@@ -1,0 +1,26 @@
+<h1> Rate {{room.Name}} </h1>
+Address: {{room.Location}}
+<br>
+Gender: {{room.Info.Gender}}
+<br>
+Bathroom Type: {{room.Info.roomType}}
+<br>
+Handicap Accessible: {{room.Info.handicap}}
+<br>
+Pads/Tampons Available: {{room.Info.pads}}
+<br>
+Privacy: {{room.Info.privacy}}
+<br>
+<form action="/rate/{{room.Name}}" method="post">
+	On a scale of of 1 to 5, how would you rate this bathroom?
+	<input type="number" name="stars" min="1" max="5">
+	<br>
+	Explain:
+	<br>
+	<textarea name="comment"></textarea>
+	<br>
+	<input type="submit" value="Rate">
+</form>
+<hr>
+<h3> Previous Reviews </h3>
+{{room.rating}}
