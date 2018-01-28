@@ -62,17 +62,17 @@ app.get('/register', function(req, res) {
 });
 
 app.post('/register', function(req, res) {
-	ds.testCreateUser();
-	// const pw = req.body.password;
-	// const name = req.body.username;
-	// User.register(new User({username: name, rating: 0}), pw, function(err, user) {
-	// 	if (err) {
-	// 		return res.render('register', {user: user});
-	// 	}
-	// 	passport.authenticate('local')(req, res, function () {
-	// 		res.redirect('/');
-	// 	});
-	// });
+	//ds.testCreateUser();
+	const pw = req.body.password;
+	const name = req.body.username;
+	User.register(new User({username: name, rating: 0}), pw, function(err, user) {
+	 	if (err) {
+	 		return res.render('register', {user: user});
+	 	}
+	 	passport.authenticate('local')(req, res, function () {
+	 		res.redirect('/');
+	 	});
+	});
 });
 
 app.get('/logout', function(req, res) {
@@ -82,42 +82,45 @@ app.get('/logout', function(req, res) {
 //********************** Other Routes ******************************/
 
 app.get('/bathrooms', function (req, res) {
-	res.render('bathrooms', {rooms: parseData.getBathrooms()});
-	// Bathroom.find(function(err, rooms, count) {
-	// 	console.log(rooms);
-	// 	res.render('bathrooms', {
-	// 		rooms: rooms
-	// 	});
-	// });
+	//res.render('bathrooms', {rooms: parseData.getBathrooms()});
+	Bathroom.find(function(err, rooms, count) {
+	 	//console.log(rooms);
+	 	res.render('bathrooms', {
+	 		rooms: parseData.getBathrooms().concat(rooms)
+	 	});
+	});
 });
 
 app.post('/bathrooms', function (req, res) {
-
-	// let hasPads = req.body.pads;
-	// if (hasPads == 'yes') {
-	// 	hasPads = true;
-	// }
-	// else {
-	// 	hasPads = false;
-	// }
-	// let handi = req.body.handicap;
-	// if (handi == 'yes') {
-	// 	handi = true;
-	// }
-	// else {
-	// 	handi = false;
-	// }
-	// var newBath = new Bathroom({
-	// 	Name: req.body.Name,
-	// 	Location: req.body.Location,
-	// 	handicap: handi,
-	// 	rating: req.body.rating,
-	// 	pads: hasPads,
-	// 	price: req.body.price
-	// }).save(function(err, meal, count) {
-	// 	res.redirect('/bathrooms');
-	// });
-	//res.send("hello world");
+	let hasPads = req.body.pads;
+	if (hasPads == 'yes') {
+	 	hasPads = true;
+	}
+	else {
+		hasPads = false;
+	}
+	let handi = req.body.handicap;
+	if (handi == 'yes') {
+	 	handi = true;
+	}
+	else {
+	 	handi = false;
+	}
+	var newBath = new Bathroom({
+		Name: req.body.Name,
+	 	Location: req.body.Location,
+		Info: {
+			Gender: req.body.gender,
+			roomType: req.body.style,
+			handicap: handi,
+			pads: hasPads,
+			privacy: req.body.privacy
+		},
+		rating: req.body.rating
+	});
+	newBath.save(function(err, room, count) {
+	 	res.redirect('/bathrooms');
+	});
 });
 
 app.get('/database', function (req, res) {
