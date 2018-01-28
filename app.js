@@ -92,42 +92,47 @@ app.get('/bathrooms', function (req, res) {
 });
 
 app.post('/bathrooms', function (req, res) {
-	let hasPads = req.body.pads;
-	if (hasPads == 'yes') {
-	 	hasPads = true;
+	if (req.user == null) {
+		res.redirect("/login");
 	}
 	else {
-		hasPads = false;
-	}
-	let handi = req.body.handicap;
-	if (handi == 'yes') {
-	 	handi = true;
-	}
-	else {
-	 	handi = false;
-	}
-	let review = new Rating({
-		stars: req.body.rating,
-		comment: req.body.comment,
-		user: req.user
-	});
-	var newBath = new Bathroom({
-		Name: req.body.Name,
-	 	Location: req.body.Location,
-		rating: [review],
-		Info: {
-			Gender: req.body.gender,
-			roomType: req.body.style,
-			handicap: handi,
-			pads: hasPads,
-			privacy: req.body.privacy
+		let hasPads = req.body.pads;
+		if (hasPads == 'yes') {
+			hasPads = true;
 		}
-	});
-	console.log(newBath);
-	newBath.save(function(err, room, count) {
-	 	console.log("New Bathroom Added");
-		res.redirect('/bathrooms');
-	});
+		else {
+			hasPads = false;
+		}
+		let handi = req.body.handicap;
+		if (handi == 'yes') {
+			handi = true;
+		}
+		else {
+			handi = false;
+		}
+		let review = new Rating({
+			stars: req.body.rating,
+			comment: req.body.comment,
+			user: req.user
+		});
+		var newBath = new Bathroom({
+			Name: req.body.Name,
+			Location: req.body.Location,
+			rating: [review],
+			Info: {
+				Gender: req.body.gender,
+				roomType: req.body.style,
+				handicap: handi,
+				pads: hasPads,
+				privacy: req.body.privacy
+			}
+		});
+		//console.log(newBath);
+		newBath.save(function(err, room, count) {
+			//console.log("New Bathroom Added");
+			res.redirect('/bathrooms');
+		});
+	}
 });
 
 app.get('/rate/:slug', function(req, res) {
@@ -139,15 +144,20 @@ app.get('/rate/:slug', function(req, res) {
 });
 
 app.post('/rate/:slug', function(req, res) {
-	const room = req.params.slug;
-	let review = new Rating ({
-		stars: req.body.stars,
-		comment: req.body.comment,
-		user: req.user
+	if (req.user == null) {
+		res.redirect('/login');
+	}
+	else { 
+		const room = req.params.slug;
+		let review = new Rating ({
+			stars: req.body.stars,
+			comment: req.body.comment,
+			user: req.user
 
-	});
-	Bathroom.findOneAndUpdate({Name: room}, {$push: {rating: review}}, (err, room, count) => {});
-	res.redirect('/bathrooms');
+		});
+		Bathroom.findOneAndUpdate({Name: room}, {$push: {rating: review}}, (err, room, count) => {});
+		res.redirect('/bathrooms');
+	}
 });
 
 app.get('/database', function (req, res) {

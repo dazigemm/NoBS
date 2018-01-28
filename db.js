@@ -10,7 +10,7 @@ const User = new mongoose.Schema({
 const Rating = new mongoose.Schema({
 	stars: Number,
 	comment: String,
-	user: {type: String, unique: true},
+	user: String,
 	date_added: {type: Date, default: Date.now}
 });
 
