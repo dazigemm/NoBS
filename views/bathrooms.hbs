@@ -12,6 +12,12 @@
 		<option value="Male">Male</option>
 	</select>
 	<br>
+	Private or Public?
+	<select name="private">
+		<option value="Private">Private</option>
+		<option value="Public">PUblic</option>
+	</select>
+	<br>
 	Bathroom Type:
 	<select name="style"> 
 		<option value="Single">Single</option>
@@ -34,29 +40,32 @@
 <hr>
 {{#if rooms}}
 	<h3> Available Bathrooms </h3>
-	<div>
-	{{#each rooms}}
-	<p>{{@index}}. Name: {{Name}}
-		<br>
-		Location: {{Location}}
-		<br>
-		Info:
-		<br>
-			Gender: {{Info.Gender}}
-			<br>
-			Pads/Tampons: {{Info.PadsTampons}} 
-			<br>
-			Public/Private: {{Info.PublicPrivate}} 
-			<br>
-			Distance: {{Info.Distance}} 
-			<br>
-			Stall/Single: {{Info.StallSingle}}
-			<br>
-			Handicap Accessible: {{Info.Handicap}}
-	</p>
-
-	{{/each}}
-	</div>
+	<table>
+		<tr>
+			<th> Name </th>
+			<th> Location </th>
+			<th> Details </th>
+		</tr>
+		{{#each rooms}}
+		<tr>
+			<td> {{Name}} </td>
+			<td> {{Location}} </td>
+			<td>
+				Gender: {{Info.Gender}}
+				<br>
+				Pads/Tampons Available: {{Info.PadsTampons}} 
+				<br>
+				Public/Private: {{Info.PublicPrivate}} 
+				<br>
+				Distance: {{Info.Distance}} 
+				<br>
+				Stall/Single: {{Info.StallSingle}}
+				<br>
+				Handicap Accessible: {{Info.Handicap}}
+			</td>
+		</tr>
+		{{/each}}
+	</table>
 {{else}}
 No bathrooms available at this time :'(
 {{/if}}
