@@ -1,4 +1,4 @@
-<h1> Add a Bathroom </h1>
+<h1> Add a Bathroom </h1><hr>
 <br>
 <form action="/bathrooms" method="post" id="bathroomForm">
 	Name: <input type="text" name="Name" class="styledInput" placeholder="Bathroom name...">
@@ -37,14 +37,14 @@
 	<br>
 	Comments:
 	<br>
-	<textarea name="comment"></textarea>
+	<textarea name="comment" style="width:100%;height:10vw;"></textarea>
 	<br>
 	<input type="submit" value="Add" id="submitButton" style="margin-left:50%;s">
 </form>
 
 
 {{#if rooms}}
-	<h3> Available Bathrooms </h3>
+	<h3> Available Bathrooms </h3><hr>
 
 	<section id="allBathrooms">
 	{{#each rooms}}
@@ -56,17 +56,16 @@
 		<li>Distance: {{Info.Distance}}</li>
 	</ul>
 	</div>
-	
+
 	{{/each}}
 	</section>
-	
+
 {{else}}
 No bathrooms available at this time :'(
 {{/if}}
-<hr>
 <br>
 
-<h3> Testing Google Maps </h3>
+<h3> Testing Google Maps </h3><hr>
 <div id="map"></div>
 <script src="/map.js"></script>
 <script async defer

@@ -1,7 +1,7 @@
 {
   "name": "nobullshit",
   "version": "1.0.0",
-  "description": "",
+  "description": "<p>This is our open-source project for SheHacks2018!\r Created by Carol He, Daisy Zheng, Connie Chan, Rebecca Shi, Rebecca Hom, and Shanequa Gowins.</p>\r <p>\r Have you ever been in an unfamiliar place, but suddenly realized you *really* needed to go to the bathroom? Have you ever walked into a public bathroom and had a less than adequate experience? This app is the solution to all your toilet problems!</p>\r <p>We are creating an app that can direct you to the nearest open bathroom and tell you exactly how pleasant or unpleasant it is to use. We are doing this through gathering data from online and allowing users to add information and reviews about their bathroom experiences. We will also allow people put their own bathrooms on our map for others to use.</p>",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
@@ -31,5 +31,6 @@
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^4.4.0",
     "uuid": "^3.2.1"
-  }
+  },
+  "devDependencies": {}
 }
