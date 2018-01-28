@@ -1,3 +1,7 @@
+//app.js
+//Copyright © 2018 Daisy Zheng <dz994@nyu.edu>
+//License: Apache License, Version 2.0
+
 // app.js
 const express = require('express');
 const app = express();
@@ -91,14 +95,30 @@ let ave = function (arr) {
 };
 //*/
 
+app.get('/getBathrooms', function (req, res) {
+	Bathroom.find(function(err, rooms, count) {
+	 	//console.log(rooms);
+	 	res.send(rooms);
+	});
+});
+
 
 app.get('/bathrooms', function (req, res) {
 	//res.render('bathrooms', {rooms: parseData.getBathrooms()});
 	let defaultRooms = parseData.getBathrooms();
 	for (var x in defaultRooms) {
-		let bRoom = new Bathroom(defaultRooms[x]);
+		let bRoom = new Bathroom({Name: defaultRooms[x].Name,
+			Location: defaultRooms[x].Location,
+			Info: {
+				Gender: defaultRooms[x].Info.Gender,
+				pads: defaultRooms[x].Info.PadsTampons,
+				handicap: defaultRooms[x].Info.Handicap,
+				privacy: defaultRooms[x].Info.PublicPrivate,
+				roomType: defaultRooms[x].Info.StallSingle}
+			});
+		//console.log(bRoom);
 		Bathroom.count({Name: bRoom.Name}, function (err, count) {
-			if (count == 0) {
+			if (count < 1) {
 				new Bathroom(bRoom).save(function (err, room, count) {
 					console.log("adding default bathrooms");
 				});
@@ -169,7 +189,7 @@ app.post('/rate/:slug', function(req, res) {
 	if (req.user == null) {
 		res.redirect('/login');
 	}
-	else { 
+	else {
 		const room = req.params.slug;
 		let review = new Rating ({
 			stars: req.body.stars,
