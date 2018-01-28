@@ -20,7 +20,8 @@ const Bathroom = new mongoose.Schema({
 		Gender: String,
 		roomType: String,
 		handicap: Boolean,
-		pads: Boolean
+		pads: Boolean,
+		privacy: String
 	}
 });
 

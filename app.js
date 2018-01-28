@@ -82,17 +82,16 @@ app.get('/logout', function(req, res) {
 //********************** Other Routes ******************************/
 
 app.get('/bathrooms', function (req, res) {
-	res.render('bathrooms', {rooms: parseData.getBathrooms()});
-	// Bathroom.find(function(err, rooms, count) {
-	// 	console.log(rooms);
-	// 	res.render('bathrooms', {
-	// 		rooms: rooms
-	// 	});
-	// });
+	//res.render('bathrooms', {rooms: parseData.getBathrooms()});
+	Bathroom.find(function(err, rooms, count) {
+	 	console.log(rooms);
+	 	res.render('bathrooms', {
+	 		rooms: parseData.getBathrooms().concat(rooms)
+	 	});
+	});
 });
 
 app.post('/bathrooms', function (req, res) {
-
 	let hasPads = req.body.pads;
 	if (hasPads == 'yes') {
 	 	hasPads = true;
@@ -114,14 +113,13 @@ app.post('/bathrooms', function (req, res) {
 			Gender: req.body.gender,
 			roomType: req.body.style,
 			handicap: handi,
-			pads: hasPads
+			pads: hasPads,
+			privacy: req.body.privacy
 		},
 		rating: req.body.rating
 	});
-	//console.log(newBath);
 	newBath.save(function(err, room, count) {
 	 	res.redirect('/bathrooms');
-		//res.send("done!");
 	});
 });
 
