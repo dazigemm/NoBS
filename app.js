@@ -116,11 +116,35 @@ app.post('/bathrooms', function (req, res) {
 			pads: hasPads,
 			privacy: req.body.privacy
 		},
-		rating: req.body.rating
+		rating: [new Rating({
+			stars: req.body.rating,
+			comment: req.body.comment,
+			user: req.user
+		})]
 	});
 	newBath.save(function(err, room, count) {
 	 	res.redirect('/bathrooms');
 	});
+});
+
+app.get('/rate/:slug', function(req, res) {
+	const room = req.params.slug;
+	Bathroom.findOne({Name: room}, function (err, roomFound) {
+		//console.log(roomFound);
+		res.render('rate', {room: roomFound});
+	});
+});
+
+app.post('/rate/:slug', function(req, res) {
+	const room = req.params.slug;
+	let review = new Rating ({
+		stars: req.body.stars,
+		comment: req.body.comment,
+		user: req.user
+
+	});
+	Bathroom.findOneAndUpdate({Name: room}, {$push: {rating: review}}, (err, room, count) => {});
+	res.redirect('/bathrooms');
 });
 
 app.get('/database', function (req, res) {
