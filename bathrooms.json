@@ -4,10 +4,11 @@
     "Location": "Teller Avenue, Park Avenue, Clay Avenue, East 64 Street",
     "Info": {
       "Gender": "Gender Neutral",
-      "Pads/Tampons": false,
-      "Public/Private": "public",
+      "PadsTampons": false,
+      "PublicPrivate": "public",
       "Distance": 5,
-      "Stall/Single": "Single"
+      "StallSingle": "Single",
+      "Handicap": false
     }
   },
   {
@@ -15,10 +16,11 @@
     "Location": "1054 Tinton Ave, Bronx, NY 10456",
     "Info": {
       "Gender": "Gender Neutral",
-      "Pads/Tampons": false,
-      "Public/Private": "public",
+      "PadsTampons": false,
+      "PublicPrivate": "public",
       "Distance": 5,
-      "Stall/Single": "Single"
+      "StallSingle": "Single",
+      "Handicap": true
     }
   },
   {
@@ -26,10 +28,11 @@
     "Location": "Crotona Avenue, East 181 Street",
     "Info": {
       "Gender": "Gender Neutral",
-      "Pads/Tampons": false,
-      "Public/Private": "public",
+      "PadsTampons": false,
+      "PublicPrivate": "public",
       "Distance": 5,
-      "Stall/Single": "Single"
+      "StallSingle": "Single",
+      "Handicap": true
     }
   },
   {
@@ -37,10 +40,11 @@
     "Location": "East 156 Street, Forest Avenue",
     "Info": {
       "Gender": "Gender Neutral",
-      "Pads/Tampons": false,
-      "Public/Private": "public",
+      "PadsTampons": false,
+      "PublicPrivate": "public",
       "Distance": 5,
-      "Stall/Single": "Single"
+      "StallSingle": "Single",
+      "Handicap": false
     }
   },
   {
@@ -48,10 +52,11 @@
     "Location": "3 Avenue, East 144 Street, East 146 Street",
     "Info": {
       "Gender": "Gender Neutral",
-      "Pads/Tampons": false,
-      "Public/Private": "public",
+      "PadsTampons": false,
+      "PublicPrivate": "public",
       "Distance": 5,
-      "Stall/Single": "Single"
+      "StallSingle": "Single",
+      "Handicap": true
     }
   }
 ]
