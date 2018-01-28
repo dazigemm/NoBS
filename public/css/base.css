@@ -34,48 +34,55 @@ body {
 }
 
 /*bathrooms.hsb styles*/
-#bathroomForm{		/*form style block*/
-		margin:auto;
-		width:60%;
-		padding:2%;
-		background-color:#fff8c9;
-		margin-bottom:2%;
+
+#bathroomForm {
+  /*form style block*/
+  margin: auto;
+  width: 60%;
+  padding: 2%;
+  background-color: #fff8c9;
+  margin-bottom: 2%;
 }
 
-input{		/*form style spacing*/
-	margin:0.5;
-}
-.styledInput{		/*form style for name, location, rating*/
-	width:100%;
+input {
+  /*form style spacing*/
+  margin: 0.5;
 }
 
-.newBathroom{		/*bathroom rating style: inside divs*/
-	width:30%;
-	height:100%;
-	background-color:#719e53;
-	padding:2%;
-	margin-left:14%;
-	margin-bottom:2%;
-	display:inline-block;
-
+.styledInput {
+  /*form style for name, location, rating*/
+  width: 100%;
 }
 
-#allBathrooms{ /*bathroom rating style: container*/
-	margin:auto;
-	width:90%;
-	padding:2%;
+.newBathroom {
+  /*bathroom rating style: inside divs*/
+  width: 30%;
+  height: 100%;
+  background-color: #719e53;
+  padding: 2%;
+  margin-left: 14%;
+  margin-bottom: 2%;
+  display: inline-block;
 }
 
-#allBathrooms a{ /*bathroom name link style*/
-	color:#2b492a;
-	text-decoration: none;
+#allBathrooms {
+  /*bathroom rating style: container*/
+  margin: auto;
+  width: 90%;
+  padding: 2%;
 }
 
-#allBathrooms a:hover{
-	color:#b1d8b2;
-	transition:1s;
+#allBathrooms a {
+  /*bathroom name link style*/
+  color: #2b492a;
+  text-decoration: none;
 }
 
-#allBathrooms ul{
-	list-style:none;
+#allBathrooms a:hover {
+  color: #b1d8b2;
+  transition: 1s;
+}
+
+#allBathrooms ul {
+  list-style: none;
 }
