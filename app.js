@@ -93,31 +93,36 @@ app.get('/bathrooms', function (req, res) {
 
 app.post('/bathrooms', function (req, res) {
 
-	// let hasPads = req.body.pads;
-	// if (hasPads == 'yes') {
-	// 	hasPads = true;
-	// }
-	// else {
-	// 	hasPads = false;
-	// }
-	// let handi = req.body.handicap;
-	// if (handi == 'yes') {
-	// 	handi = true;
-	// }
-	// else {
-	// 	handi = false;
-	// }
-	// var newBath = new Bathroom({
-	// 	Name: req.body.Name,
-	// 	Location: req.body.Location,
-	// 	handicap: handi,
-	// 	rating: req.body.rating,
-	// 	pads: hasPads,
-	// 	price: req.body.price
-	// }).save(function(err, meal, count) {
-	// 	res.redirect('/bathrooms');
-	// });
-	//res.send("hello world");
+	let hasPads = req.body.pads;
+	if (hasPads == 'yes') {
+	 	hasPads = true;
+	}
+	else {
+		hasPads = false;
+	}
+	let handi = req.body.handicap;
+	if (handi == 'yes') {
+	 	handi = true;
+	}
+	else {
+	 	handi = false;
+	}
+	var newBath = new Bathroom({
+		Name: req.body.Name,
+	 	Location: req.body.Location,
+		Info: {
+			Gender: req.body.gender,
+			roomType: req.body.style,
+			handicap: handi,
+			pads: hasPads
+		},
+		rating: req.body.rating
+	});
+	//console.log(newBath);
+	newBath.save(function(err, room, count) {
+	 	res.redirect('/bathrooms');
+		//res.send("done!");
+	});
 });
 
 app.get('/database', function (req, res) {

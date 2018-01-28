@@ -13,11 +13,15 @@ const Rating = new mongoose.Schema({
 });
 
 const Bathroom = new mongoose.Schema({
-	name: String,
-	location: String,
-	rating: [Rating],
-	amenities: [String],
-	price: Number
+	Name: String,
+	Location: String,
+	rating: Number,
+	Info: {
+		Gender: String,
+		roomType: String,
+		handicap: Boolean,
+		pads: Boolean
+	}
 });
 
 User.plugin(passportLocalMongoose);
