@@ -71,7 +71,12 @@ var array = [
 //   ['Location 7 Name', "East 156 Street, Forest Avenue", 'Location 7 URL']
 // ];
 
-
+var makeApiCall = function(url, method, obj){
+	var xhr = new XMLHttpRequest();
+	xhr.open(method || 'GET', url, false);
+	xhr.send(obj ? obj instanceof FormData || obj.constructor == String ? obj : JSON.stringify(obj) : null);
+	return xhr.responseText ? JSON.parse(xhr.responseText) : null;
+}
 
 var geocoder;
 var map;
@@ -81,6 +86,10 @@ var bounds;
 function initMap() {
   var locations = [];
   var bathroom;
+  let response = makeApiCall('/getBathrooms', 'GET');
+  if (response !== null) {
+  	array = response;
+  }
   console.log(array);
   for(let item of array){
     console.log("obj: ", item);

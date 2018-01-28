@@ -91,6 +91,13 @@ let ave = function (arr) {
 };
 //*/
 
+app.get('/getBathrooms', function (req, res) {
+	Bathroom.find(function(err, rooms, count) {
+	 	//console.log(rooms);
+	 	res.send(rooms);
+	});
+});
+
 
 app.get('/bathrooms', function (req, res) {
 	//res.render('bathrooms', {rooms: parseData.getBathrooms()});
