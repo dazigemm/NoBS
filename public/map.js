@@ -61,16 +61,6 @@ var array = [
   }
 ];
 
-// var locations = [
-//   ['Location 1 Name', "Teller Avenue, Park Avenue, Clay Avenue, East 64 Street", 'Location 1 URL'],
-//   ['Location 2 Name', "1054 Tinton Ave, Bronx, NY 10456", 'Location 2 URL'],
-//   ['Location 3 Name', "Crotona Avenue, East 181 Street", 'Location 3 URL'],
-//   ['Location 4 Name', "East 156 Street, Forest Avenue", 'Location 4 URL'],
-//   ['Location 5 Name', "250 W 146th St", 'Location 5 URL'],
-//   ['Location 6 Name', "East 156 Street, Forest Avenue", 'Location 6 URL'],
-//   ['Location 7 Name', "East 156 Street, Forest Avenue", 'Location 7 URL']
-// ];
-
 
 
 var geocoder;
