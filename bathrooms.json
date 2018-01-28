@@ -1,0 +1,62 @@
+[
+  {
+    "Name": "Arcilla Playground",
+    "Location": "Teller Avenue, Park Avenue, Clay Avenue, East 64 Street",
+    "Info": {
+      "Gender": "Gender Neutral",
+      "PadsTampons": false,
+      "PublicPrivate": "public",
+      "Distance": 5,
+      "StallSingle": "Single",
+      "Handicap": false
+    }
+  },
+  {
+    "Name": "Behagen Playground",
+    "Location": "Tinton Avenue, East 165 Street, Union Avenue, East 166 Street",
+    "Info": {
+      "Gender": "Gender Neutral",
+      "PadsTampons": false,
+      "PublicPrivate": "public",
+      "Distance": 5,
+      "StallSingle": "Single",
+      "Handicap": true
+    }
+  },
+  {
+    "Name": "Belmont Playground",
+    "Location": "Crotona Avenue, East 181 Street",
+    "Info": {
+      "Gender": "Gender Neutral",
+      "PadsTampons": false,
+      "PublicPrivate": "public",
+      "Distance": 5,
+      "StallSingle": "Single",
+      "Handicap": true
+    }
+  },
+  {
+    "Name": "Capt. Rivera Playground",
+    "Location": "East 156 Street, Forest Avenue",
+    "Info": {
+      "Gender": "Gender Neutral",
+      "PadsTampons": false,
+      "PublicPrivate": "public",
+      "Distance": 5,
+      "StallSingle": "Single",
+      "Handicap": false
+    }
+  },
+  {
+    "Name": "Clark Playground",
+    "Location": "3 Avenue, East 144 Street, East 146 Street",
+    "Info": {
+      "Gender": "Gender Neutral",
+      "PadsTampons": false,
+      "PublicPrivate": "public",
+      "Distance": 5,
+      "StallSingle": "Single",
+      "Handicap": true
+    }
+  }
+]

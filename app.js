@@ -21,8 +21,9 @@ const sessionOptions = {
 app.use(session(sessionOptions));
 
 //* link db
-const datastore = require('./datastore.js');
+const ds = require('./datastore.js');
 require('./db');
+const parseData = require('./parseData.js');
 const mongoose = require('mongoose');
 const User = mongoose.model('User');
 const Rating = mongoose.model('Rating');
@@ -61,7 +62,7 @@ app.get('/register', function(req, res) {
 });
 
 app.post('/register', function(req, res) {
-	datastore.testCreateUser();
+	ds.testCreateUser();
 	// const pw = req.body.password;
 	// const name = req.body.username;
 	// User.register(new User({username: name, rating: 0}), pw, function(err, user) {
@@ -81,40 +82,47 @@ app.get('/logout', function(req, res) {
 //********************** Other Routes ******************************/
 
 app.get('/bathrooms', function (req, res) {
-	Bathroom.find(function(err, rooms, count) {
-		console.log(rooms);
-		res.render('bathrooms', {
-			rooms: rooms
-		});
-	});
+	res.render('bathrooms', {rooms: parseData.getBathrooms()});
+	// Bathroom.find(function(err, rooms, count) {
+	// 	console.log(rooms);
+	// 	res.render('bathrooms', {
+	// 		rooms: rooms
+	// 	});
+	// });
 });
 
 app.post('/bathrooms', function (req, res) {
-	let hasPads = req.body.pads;
-	if (hasPads == 'yes') {
-		hasPads = true;
-	}
-	else {
-		hasPads = false;
-	}
-	let handi = req.body.handicap;
-	if (handi == 'yes') {
-		handi = true;
-	}
-	else {
-		handi = false;
-	}
-	var newBath = new Bathroom({
-		Name: req.body.Name,
-		Location: req.body.Location,
-		handicap: handi,
-		rating: req.body.rating,
-		pads: hasPads,
-		price: req.body.price
-	}).save(function(err, meal, count) {
-		res.redirect('/bathrooms');
-	});
+
+	// let hasPads = req.body.pads;
+	// if (hasPads == 'yes') {
+	// 	hasPads = true;
+	// }
+	// else {
+	// 	hasPads = false;
+	// }
+	// let handi = req.body.handicap;
+	// if (handi == 'yes') {
+	// 	handi = true;
+	// }
+	// else {
+	// 	handi = false;
+	// }
+	// var newBath = new Bathroom({
+	// 	Name: req.body.Name,
+	// 	Location: req.body.Location,
+	// 	handicap: handi,
+	// 	rating: req.body.rating,
+	// 	pads: hasPads,
+	// 	price: req.body.price
+	// }).save(function(err, meal, count) {
+	// 	res.redirect('/bathrooms');
+	// });
 	//res.send("hello world");
+});
+
+app.get('/database', function (req, res) {
+	var data = ds.displayAllData();
+	res.render('/database', data);
 });
 
 app.listen(process.env.PORT || 5000);
