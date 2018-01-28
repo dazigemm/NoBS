@@ -19,7 +19,7 @@
 	</select>
 	<br>
 	Bathroom Type:
-	<select name="style"> 
+	<select name="style">
 		<option value="Single">Single</option>
 		<option value="Stalls">Stalls</option>
 	</select>
@@ -53,11 +53,11 @@
 			<td>
 				Gender: {{Info.Gender}}
 				<br>
-				Pads/Tampons Available: {{Info.PadsTampons}} 
+				Pads/Tampons Available: {{Info.PadsTampons}}
 				<br>
-				Public/Private: {{Info.PublicPrivate}} 
+				Public/Private: {{Info.PublicPrivate}}
 				<br>
-				Distance: {{Info.Distance}} 
+				Distance: {{Info.Distance}}
 				<br>
 				Stall/Single: {{Info.StallSingle}}
 				<br>
@@ -72,19 +72,7 @@ No bathrooms available at this time :'(
 <hr>
 <h3> Testing Google Maps </h3>
 <div id="map"></div>
-<script>
-	function initMap() {
-		var uluru = {lat: -25.363, lng: 131.044};
-		var map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 4,
-			center: uluru
-		});
-		var marker = new google.maps.Marker({
-			posiition: uluru,
-			map: map
-		});
-	}
-</script>
+<script src="/map.js"></script>
 <script async defer
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpQUJETa6o-dkuNiYfVBTnaao9zplX6_Y&callback=initMap">
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpQUJETa6o-dkuNiYfVBTnaao9zplX6_Y&callback=initMap">
 </script>
