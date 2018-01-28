@@ -1,9 +1,77 @@
-
-var locations = [
-  ['Location 1 Name', "Teller Avenue, Park Avenue, Clay Avenue, East 64 Street", 'Location 1 URL'],
-  ['Location 2 Name', "1054 Tinton Ave, Bronx, NY 10456", 'Location 2 URL'],
-  ['Location 3 Name', "Crotona Avenue, East 181 Street", 'Location 3 URL']
+var array = [
+  {
+    "Name": "Arcilla Playground",
+    "Location": "Teller Avenue, Park Avenue, Clay Avenue, East 64 Street",
+    "Info": {
+      "Gender": "Gender Neutral",
+      "PadsTampons": false,
+      "PublicPrivate": "public",
+      "Distance": 5,
+      "StallSingle": "Single",
+      "Handicap": false
+    }
+  },
+  {
+    "Name": "Behagen Playground",
+    "Location": "1054 Tinton Ave, Bronx, NY 10456",
+    "Info": {
+      "Gender": "Gender Neutral",
+      "PadsTampons": false,
+      "PublicPrivate": "public",
+      "Distance": 5,
+      "StallSingle": "Single",
+      "Handicap": true
+    }
+  },
+  {
+    "Name": "Belmont Playground",
+    "Location": "Crotona Avenue, East 181 Street",
+    "Info": {
+      "Gender": "Gender Neutral",
+      "PadsTampons": false,
+      "PublicPrivate": "public",
+      "Distance": 5,
+      "StallSingle": "Single",
+      "Handicap": true
+    }
+  },
+  {
+    "Name": "Capt. Rivera Playground",
+    "Location": "East 156 Street, Forest Avenue",
+    "Info": {
+      "Gender": "Gender Neutral",
+      "PadsTampons": false,
+      "PublicPrivate": "public",
+      "Distance": 5,
+      "StallSingle": "Single",
+      "Handicap": false
+    }
+  },
+  {
+    "Name": "Clark Playground",
+    "Location": "3 Avenue, East 144 Street, East 146 Street NY",
+    "Info": {
+      "Gender": "Gender Neutral",
+      "PadsTampons": false,
+      "PublicPrivate": "public",
+      "Distance": 5,
+      "StallSingle": "Single",
+      "Handicap": true
+    }
+  }
 ];
+
+// var locations = [
+//   ['Location 1 Name', "Teller Avenue, Park Avenue, Clay Avenue, East 64 Street", 'Location 1 URL'],
+//   ['Location 2 Name', "1054 Tinton Ave, Bronx, NY 10456", 'Location 2 URL'],
+//   ['Location 3 Name', "Crotona Avenue, East 181 Street", 'Location 3 URL'],
+//   ['Location 4 Name', "East 156 Street, Forest Avenue", 'Location 4 URL'],
+//   ['Location 5 Name', "250 W 146th St", 'Location 5 URL'],
+//   ['Location 6 Name', "East 156 Street, Forest Avenue", 'Location 6 URL'],
+//   ['Location 7 Name', "East 156 Street, Forest Avenue", 'Location 7 URL']
+// ];
+
+
 
 var geocoder;
 var map;
@@ -11,6 +79,17 @@ var bounds;
 
 
 function initMap() {
+  var locations = [];
+  var bathroom;
+  console.log(array);
+  for(let item of array){
+    console.log("obj: ", item);
+     bathroom = [];
+    bathroom.push(item.Name);
+    bathroom.push(item.Location);
+    console.log(bathroom);
+    locations.push(bathroom);
+  }
   bounds = new google.maps.LatLngBounds();
   map = new google.maps.Map(
     document.getElementById("map"), {
@@ -30,7 +109,8 @@ function initMap() {
 function geocodeAddress(locations, i) {
   var title = locations[i][0];
   var address = locations[i][1];
-  var url = locations[i][2];
+  var url = "";
+  console.log(address);
   geocoder.geocode({
       'address': locations[i][1]
     },
