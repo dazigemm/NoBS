@@ -62,17 +62,17 @@ app.get('/register', function(req, res) {
 });
 
 app.post('/register', function(req, res) {
-	ds.testCreateUser();
-	// const pw = req.body.password;
-	// const name = req.body.username;
-	// User.register(new User({username: name, rating: 0}), pw, function(err, user) {
-	// 	if (err) {
-	// 		return res.render('register', {user: user});
-	// 	}
-	// 	passport.authenticate('local')(req, res, function () {
-	// 		res.redirect('/');
-	// 	});
-	// });
+	//ds.testCreateUser();
+	const pw = req.body.password;
+	const name = req.body.username;
+	User.register(new User({username: name, rating: 0}), pw, function(err, user) {
+	 	if (err) {
+	 		return res.render('register', {user: user});
+	 	}
+	 	passport.authenticate('local')(req, res, function () {
+	 		res.redirect('/');
+	 	});
+	});
 });
 
 app.get('/logout', function(req, res) {
@@ -84,7 +84,7 @@ app.get('/logout', function(req, res) {
 app.get('/bathrooms', function (req, res) {
 	//res.render('bathrooms', {rooms: parseData.getBathrooms()});
 	Bathroom.find(function(err, rooms, count) {
-	 	console.log(rooms);
+	 	//console.log(rooms);
 	 	res.render('bathrooms', {
 	 		rooms: parseData.getBathrooms().concat(rooms)
 	 	});
