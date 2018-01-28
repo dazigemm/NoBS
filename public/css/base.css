@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 h1 {
-  color: blue;
+  font-family:'Montserrat', sans-serif;
 }
 
 button:focus {
@@ -15,10 +15,27 @@ button:focus {
 body {
   margin-top: 60px;
   padding: 2%;
+  background-color:#9fdb90;
 }
 
 #map {
 	width: 100%;
 	height: 400px;
 	background-color: grey;
+}
+
+/*Contact Page Styles*/
+#contactStyles{
+	width:40%;
+	height:300px;
+	background-color:#77bc65;
+	margin:auto;
+	padding:2%;
+	text-align:justify;
+
+}
+
+/*Styles for the form on bathrooms.hsb*/
+input{
+	margin:0.25%;
 }
