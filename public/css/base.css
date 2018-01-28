@@ -35,6 +35,15 @@ body {
 }
 
 /*Styles for the form on bathrooms.hsb*/
+table{
+	margin:auto;
+}
+
 input{
 	margin:0.25%;
+}
+
+th, td{
+	padding:15px;
+	border-bottom: 1px solid;
 }
