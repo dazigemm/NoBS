@@ -23,4 +23,7 @@ Privacy: {{room.Info.privacy}}
 </form>
 <hr>
 <h3> Previous Reviews </h3>
-{{room.rating}}
+{{#each room.rating}}
+	<h5> {{stars}} Stars </h5>
+	{{username}}: {{comment}}
+{{/each}}
