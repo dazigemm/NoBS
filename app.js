@@ -94,6 +94,17 @@ let ave = function (arr) {
 
 app.get('/bathrooms', function (req, res) {
 	//res.render('bathrooms', {rooms: parseData.getBathrooms()});
+	let defaultRooms = parseData.getBathrooms();
+	for (var x in defaultRooms) {
+		let bRoom = new Bathroom(defaultRooms[x]);
+		Bathroom.count({Name: bRoom.Name}, function (err, count) {
+			if (count == 0) {
+				new Bathroom(bRoom).save(function (err, room, count) {
+					console.log("adding default bathrooms");
+				});
+			}
+		});
+	}
 	Bathroom.find(function(err, rooms, count) {
 	 	//console.log(rooms);
 	 	res.render('bathrooms', {
@@ -138,9 +149,9 @@ app.post('/bathrooms', function (req, res) {
 				privacy: req.body.privacy
 			}
 		});
-		//console.log(newBath);
+		console.log(newBath);
 		newBath.save(function(err, room, count) {
-			//console.log("New Bathroom Added");
+			console.log("New Bathroom Added");
 			res.redirect('/bathrooms');
 		});
 	}

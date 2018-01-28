@@ -9,7 +9,13 @@ function getBathrooms(){
   var contents = fs.readFileSync("bathrooms.json");
   // Define to JSON type
   var jsonContent = JSON.parse(contents);
-  mongoose.connection.db.dropCollection('bathrooms', function (err, result) {
+  
+  return jsonContent;
+}
+
+/*
+
+mongoose.connection.db.dropCollection('bathrooms', function (err, result) {
 	  console.log("emptying bathrooms collection");
   });
   for (var x in jsonContent) {
@@ -18,8 +24,7 @@ function getBathrooms(){
 		console.log("adding default bathrooms");
 	});
   }
-  return jsonContent;
-}
+*/
 
 module.exports = {
   getBathrooms: getBathrooms
