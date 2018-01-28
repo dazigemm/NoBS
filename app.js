@@ -53,9 +53,9 @@ app.get('/login', function (req, res) {
 	res.render('login', {user: req.user});
 });
 
-app.post('/login', passport.authenticate('local'), function(req, res) {
-	res.redirect('/');
-});
+app.post('/login',
+  passport.authenticate('local', { successRedirect: '/',
+                                   failureRedirect: '/register' }));
 
 app.get('/register', function(req, res) {
 	res.render('register');
