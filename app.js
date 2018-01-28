@@ -81,10 +81,21 @@ app.get('/logout', function(req, res) {
 });
 //********************** Other Routes ******************************/
 
+//*
+let ave = function (arr) {
+	let sum = 0;
+	for (a in arr) {
+		sum += a;
+	}
+	return sum / arr.length;
+};
+//*/
+
+
 app.get('/bathrooms', function (req, res) {
 	//res.render('bathrooms', {rooms: parseData.getBathrooms()});
 	Bathroom.find(function(err, rooms, count) {
-	 	console.log(rooms);
+	 	//console.log(rooms);
 	 	res.render('bathrooms', {
 	 		rooms: parseData.getBathrooms().concat(rooms)
 	 	});
