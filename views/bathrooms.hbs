@@ -1,75 +1,67 @@
 <h1> Add a Bathroom </h1>
 <br>
-<form action="/bathrooms" method="post">
-	Name: <input type="text" name="Name">
-	<br>
-	Location: <input type="text" name="Location">
-	<br>
+<form action="/bathrooms" method="post" id="bathroomForm">
+	Name: <input type="text" name="Name" class="styledInput" placeholder="Bathroom name...">
+	<br><br>
+	Location: <input type="text" name="Location" class="styledInput" placeholder="Location...">
+	<br><br>
 	Gender:
 	<select name="gender">
 		<option value="Neutral">Gender Neutral</option>
 		<option value="Female">Female</option>
 		<option value="Male">Male</option>
 	</select>
-	<br>
+	<br><br>
 	Private or Public?
 	<select name="privacy">
 		<option value="Private">Private</option>
-		<option value="Public">PUblic</option>
+		<option value="Public">Public</option>
 	</select>
-	<br>
+	<br><br>
 	Bathroom Type:
 	<select name="style"> 
 		<option value="Single">Single</option>
 		<option value="Stalls">Stalls</option>
 	</select>
-	<br>
+	<br><br>
 	Handicap Accessible?
 	<input type="radio" name="handicap" value="yes"> Yes
 	<input type="radio" name="handicap" value="no"> No
-	<br>
+	<br><br>
 	Tampons or Pads available?
 	<input type="radio" name="pads" value="yes"> Yes
 	<input type="radio" name="pads" value="no"> No
-	<br>
+	<br><br>
 	On a scale of 1 to 5, how would you rate this bathroom?
-	<input type="number" name="rating" min="1" max="5">
-	<br>
-	<input type="submit" value="Add">
+	<input type="number" name="rating" min="1" max="5" class="styledInput" placeholder="Rating from 1 to 5...">
+	<br><br>
+	<input type="submit" value="Add" id="submitButton" style="margin-left:50%;s">
 </form>
-<hr>
+
+
 {{#if rooms}}
 	<h3> Available Bathrooms </h3>
-	<table>
-		<tr>
-			<th> Name </th>
-			<th> Location </th>
-			<th> Details </th>
-		</tr>
-		{{#each rooms}}
-		<tr>
-			<td> {{Name}} </td>
-			<td> {{Location}} </td>
-			<td>
-				Gender: {{Info.Gender}}
-				<br>
-				Pads/Tampons Available: {{Info.PadsTampons}} 
-				<br>
-				Public/Private: {{Info.PublicPrivate}} 
-				<br>
-				Distance: {{Info.Distance}} 
-				<br>
-				Stall/Single: {{Info.StallSingle}}
-				<br>
-				Handicap Accessible: {{Info.Handicap}}
-			</td>
-		</tr>
-		{{/each}}
-	</table>
+
+	<section id="allBathrooms">
+	{{#each rooms}}
+	<div class="newBathroom">
+	<h4><a href="/rate/{{Name}}" id="bathroomName">{{Name}}</a></h4>
+	<h5>{{Location}}</h5>
+	<ul id="bathroomListing">
+		<li>Rating: {{Rating}}</li>
+		<li>Distance: {{Info.Distance}}</li>
+	</ul>
+	</div>
+	
+	{{/each}}
+	</section>
+	
 {{else}}
 No bathrooms available at this time :'(
 {{/if}}
 <hr>
+<br>
+
 <h3> Testing Google Maps </h3>
 <div id="map"></div>
 <script>
@@ -88,3 +80,4 @@ No bathrooms available at this time :'(
 <script async defer
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpQUJETa6o-dkuNiYfVBTnaao9zplX6_Y&callback=initMap">
 </script>
+</div>
