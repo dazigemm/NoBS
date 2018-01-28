@@ -1,3 +1,6 @@
+//map.js
+//Copyright © 2018 Daisy Zheng <dz994@nyu.edu>
+//License: Apache License, Version 2.0
 
 var locations = [
   ['Location 1 Name', "Teller Avenue, Park Avenue, Clay Avenue, East 64 Street", 'Location 1 URL'],
