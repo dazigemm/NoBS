@@ -3,6 +3,11 @@ body {
   padding: 0%;
 }
 
+#slogan {
+  width: 100%;
+  height: auto;
+}
+
 #slogan img {
   width: 100%;
   height: 100%;
