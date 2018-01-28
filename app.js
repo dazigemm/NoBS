@@ -84,7 +84,7 @@ app.get('/logout', function(req, res) {
 app.get('/bathrooms', function (req, res) {
 	//res.render('bathrooms', {rooms: parseData.getBathrooms()});
 	Bathroom.find(function(err, rooms, count) {
-	 	//console.log(rooms);
+	 	console.log(rooms);
 	 	res.render('bathrooms', {
 	 		rooms: parseData.getBathrooms().concat(rooms)
 	 	});
@@ -106,24 +106,27 @@ app.post('/bathrooms', function (req, res) {
 	else {
 	 	handi = false;
 	}
+	let review = new Rating({
+		stars: req.body.rating,
+		comment: req.body.comment,
+		user: req.user
+	});
 	var newBath = new Bathroom({
 		Name: req.body.Name,
 	 	Location: req.body.Location,
+		rating: [review],
 		Info: {
 			Gender: req.body.gender,
 			roomType: req.body.style,
 			handicap: handi,
 			pads: hasPads,
 			privacy: req.body.privacy
-		},
-		rating: [new Rating({
-			stars: req.body.rating,
-			comment: req.body.comment,
-			user: req.user
-		})]
+		}
 	});
+	console.log(newBath);
 	newBath.save(function(err, room, count) {
-	 	res.redirect('/bathrooms');
+	 	console.log("New Bathroom Added");
+		res.redirect('/bathrooms');
 	});
 });
 
