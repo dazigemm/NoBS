@@ -53,7 +53,7 @@ var array = [
   },
   {
     "Name": "Clark Playground",
-    "Location": "3 Avenue, East 144 Street, East 146 Street NY",
+    "Location": "3 Avenue, East 144 Street, East 146 Street, NY",
     "Info": {
       "Gender": "Gender Neutral",
       "PadsTampons": false,
