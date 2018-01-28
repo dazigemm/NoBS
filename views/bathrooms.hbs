@@ -45,7 +45,7 @@
 	<section id="allBathrooms">
 	{{#each rooms}}
 	<div class="newBathroom">
-	<h4><a href="/rate/{{Name}}" id="bathroomName">{{Name}}</a></h4>
+	<h4><a href="/rate/{{Name}}" class="bathroomName">{{Name}}</a></h4>
 	<h5>{{Location}}</h5>
 	<ul id="bathroomListing">
 		<li>Rating: {{Rating}}</li>
@@ -56,32 +56,6 @@
 	{{/each}}
 	</section>
 	
-	<table>
-		<tr>
-			<th> Name </th>
-			<th> Location </th>
-			<th> Details </th>
-		</tr>
-		{{#each rooms}}
-		<tr>
-			<td> {{Name}} </td>
-			<td> {{Location}} </td>
-			<td>
-				Gender: {{Info.Gender}}
-				<br>
-				Pads/Tampons Available: {{Info.PadsTampons}}
-				<br>
-				Public/Private: {{Info.PublicPrivate}}
-				<br>
-				Distance: {{Info.Distance}}
-				<br>
-				Stall/Single: {{Info.StallSingle}}
-				<br>
-				Handicap Accessible: {{Info.Handicap}}
-			</td>
-		</tr>
-		{{/each}}
-	</table>
 {{else}}
 No bathrooms available at this time :'(
 {{/if}}
